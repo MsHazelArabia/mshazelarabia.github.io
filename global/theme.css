@@ -1,5 +1,5 @@
 .notion-header__title-wrapper {
-  display: block !important;
+  display: none !important;
 }
 
 
@@ -545,7 +545,7 @@ h3.notion-heading * {
 	-bottom: none !important;
 	text-decoration: none !important;
 	font-style: normal !important;
-	color: var(--primary-color) !important;
+	color: var(--pink) !important;
 }
 
 
@@ -566,7 +566,7 @@ h3.notion-heading * {
 .notion-image.page-width {
 	width: 100vw !important;
 	max-width: 100vw !important;
-	border-radius: 5px !important;
+	border-radius: 0 !important;
 }
 
 /*  Remove default margins for images  */
