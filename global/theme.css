@@ -1,254 +1,220 @@
-.notion-header__title-wrapper {
-  display: none !important;
-}
+/*             colors︱theme             */
 
-
-/* Set the border radius of the Super navbar call to action button */
-.super-navbar__cta {
-  border-radius: 5px!important;
-}
-
-
-/*------------------------------------------
-
-      Table of Contents
-
--------------------------------------------
-
-   # VARIABLES
-   # TYPOGRAPHY
-   # LAYOUT
-   # COLLECTIONS
-   # COMPONENTS
-
-
-/* ------------------------------------------
-*              # VARIABLES
-
- The purpose of CSS Variables is to define / set 
- custom property values, that may be referenced & re-
- used throughout the document, reducing repetition & 
- mistakes whilst ensuring readability, and flexibility. 
-------------------------------------------
-*            * colors | theme
------------------------------------------ */
 :root {
-/*  named values  
-  --white:                    rgb(245,245,245);
-  --platinum:                 rgba(231,224,221,0.8);
-  --palesilver:               rgb(195,177,163);
-  --silverpink:               rgba(204,163,155,0.8);
-  --rose:                     rgb(180,125,115);
-  --berry:                    rgb(153,51,34);
-  --black:                    rgb(55,55,55);
-*/
-  --grey:                     rgb(233,228,221);
-  --brown:                    rgb(176,137,104);
-  --red:                      rgb(189,10,22);
-  --orange:                   rgb(246,188,102);
-  --yellow:                   rgb(255,217,145);
-  --green:                    rgb(212,224,155);
-  --blue:                     rgb(182,204,254);
-  --purple:                   rgb(173,125,216);
-  --pink:                     #e5888abc;
-  
-/*   default Values  */
-  --color-text-gray:          rgb(172,172,172);
-  --color-text-brown:         rgb(195,158,136);
-  --color-text-red:           rgb(224,108,108);
-  --color-text-orange:        rgb(245,184,101);
-  --color-text-yellow:        rgb(246,208,129);
-  --color-text-green:         rgb(187,206,148);
-  --color-text-blue:          rgb(170,193,229);
-  --color-text-purple:        rgb(183,182,230);
-  --color-text-pink:          #e5888abc;
+/*  default Values  */
+  --color-text-gray: rgb(197,197,197) !important;
+  --color-text-brown: rgb(197,164,141) !important;
+  --color-text-red: rgb(231,158,158) !important;
+  --color-text-orange: rgb(228,217,209) !important;
+  --color-text-yellow: rgb(242,216,162) !important;
+  --color-text-green: rgb(201,219,164) !important;
+  --color-text-blue: rgb(170,193,229) !important;
+  --color-text-purple: rgb(183,182,230) !important;
+  --color-text-pink: rgb(229,159,159) !important;
 
-  --bg-default:               rgb(25,25,25)
-  --pill-default:             rgb(135,135,135)
-  --text-default:             rgb(244,244,244);
-  --primary-color:            rgb(248,166,179);
-  --secondary-color:          rgb(188,187,249);
-  --hover-color:              rgb(52,52,52);
-  --border-color:             rgb(177,177,177);
+  --text-default: rgba(52,52,52,.88) !important;
+  --bg-default: rgb(255,255,255) !important;
+  --hover-color: rgb(238,233,229) !important;
+  --border-color:var(--color-text-orange) !important;
+  --pill-default: var(--color-text-orange) !important;
+  --primary-color: var(--color-text-pink) !important;
+  --secondary-color: var(--color-text-red) !important;
 }
 
-/* ----- multiselect, highlight, callout ----- */
+
+/*  multiselect, highlight, callout  */
 /*  grey  */
 .pill-grey, .bg-grey, .bg-grey-light {
-  background-color:       #eee9e5 !important;
-  color:                  #343434;
+  --callout-color: rgb(170,170,170) !important;
+  background-color: rgb(221,221,221) !important;
+  color: rgb(86,86,86) !important;
 }
 
 /*  brown  */
 .pill-brown, .bg-brown, .bg-brown-light {
-  background-color:          #caac97;
-  color:                     #343434;
+  --callout-color: #bc9f86 !important;
+  background-color: #d2b8a2 !important;
+  color: #343434 !important;
 }
 
 /*  red  */
 .pill-red, .bg-red, .bg-red-light {
-  background-color:          #e23737;
-  color:                     rgb(245,245,245)
+  --callout-color: rgb(227,85,85) !important;
+  background-color: rgb(228,127,127) !important;
+  color: rgb(55,55,55)
 }
 
 /*  orange  */
 .pill-orange, .bg-orange, .bg-orange-light {
-  background-color:          #f5b865;
-  color:                     rgb(245,245,245);
+  --callout-color: rgb(245,162,61) !important;
+  background-color: rgb(244,193,131) !important;
+  color:rgb(55,55,55) !important;
 }
 
 /*  yellow  */
 .pill-yellow, .bg-yellow, .bg-yellow-light {
-  background-color:          #f6d081;
-  color:                     rgb(245,245,245);
+  --callout-color: rgb(244,193,131) !important;
+  background-color: rgb(251,216,135) !important;
+  color:rgb(55,55,55) !important;
 }
 
 /*  green  */
 .pill-green, .bg-green, .bg-green-light {
-  background-color:          #c0d68f;
-  color:                     rgb(245,245,245);
+  --callout-color: rgb(180,202,139) !important;
+  background-color: rgb(193,212,152) !important;
+  color: rgb(55,55,55) !important;
 }
 
 /*  blue  */
 .pill-blue, .bg-blue, .bg-blue-light {
-  background-color:          #a8c8f1;
-  color:                     rgb(245,245,245);
+  --callout-color: rgb(116,164,225) !important;
+  background-color: rgb(162,198,244) !important;
+  color: rgb(55,55,55) !important;
 }
 
 /*  purple  */
 .pill-purple, .bg-purple, .bg-purple-light {
-  background-color:          #cbbee3;
-  color:                     rgb(245,245,245);
+  --callout-color: rgb(172,154,206) !important;
+  background-color: rgb(192,177,220) !important;
+  color: rgb(55,55,55) !important;
 }
 
 /*  pink  */
 .pill-pink, .bg-pink, .bg-pink-light {
-  background-color:          #f9adb6;
-  color:                     rgb(245,245,245);
-}
-
-/*  remove styling from the default notion callout  */
-.notion-callout.bg-default-light {
-  background-color:          #EEE9E5;
-  width:                     80vw;
+  --callout-color: rgb(224,133,139) !important;
+  background-color: rgb(242,160,165) !important;
+  color: rgb(55,55,55) !important;
 }
 
 
-/* ---------------------------------------
-*             * typography
-------------------------------------------
-*   font injection  */
-	--primary-font:             "Playfair Display", serif;
-	--secondary-font:           "Inter", sans-serif;
-	--box-shadow:               10px 10px 10px 5px var(--grey);
+
+/*  -----------------------------------  *
+ *             # TYPOGRAPHY              *
+ *  ------------------------------------ */
+/*              font︱text               */
+:root {
+/*   font injection  */
+	--primary-font:"Playfair Display", serif !important;
+	--secondary-font:"Inter", sans-serif !important;
   
 /*  Spacing   */
-  --notion-text-spacing:      -.1px;
-	--notion-text-margin:       0px 0px 5px 0px;
+  --notion-text-spacing: 1.00rem !important;
+	--notion-text-margin:0 0 5px 0 !important;
+
+	--box-shadow: inset 0 0 0 5px rgba(253, 252, 251, 0), 0 2px 3px 0 rgba(0, 0, 0, 0.09), 0 1px 1.5px 0 rgba(0, 0, 0, 0.09), 0 1px 2px 0 rgba(0, 0, 0, 0.09), 0 0 0 0 transparent !important;
+}
 
 
-/* ---------------------------------------
-*                * layout
---------------------------------------------------------- */
-  --column-spacing:           25px;
-  --top-spacing:              15px;
-  --layout-max-width:         1150px;
-  --header-cover-height:      45vh;
-  --border-radius:            2.5px;
+
+/*  -----------------------------------  *
+ *               # LAYOUT                *
+ *  ------------------------------------ */
+/*             spacing fixes             */
+
+:root {
+  --column-spacing: 1rem !important;
+  --top-spacing: .5rem !important;
+  --layout-max-width: 100vw !important;
+  --header-cover-height: 45vh !important;
+  --border-radius: 2.5px !important;
+}
+
 
 
 /* ----------------------------------------
 *             * collections
------------------------------------------
-    Sizing Model   */
-  --card-cover-large:         375px;
-  --card-cover-medium:        275px;
-  --card-cover-small:         175px;
-  --collection-border:        var(--border-color);
-  --gallery-gap:              var(--column-spacing);
-  --card-border-radius:       var(--border-radius);
-  --card-border:              0px solid;
+--------------------------------------- */
+/*   Sizing Model   */
+:root {
+  --card-cover-medium:auto !important;
+  --card-cover-small: auto !important;
+  --collection-border:var(--border-color) !important;
+  --gallery-gap: var(--column-spacing) !important;
+  --card-border-radius: var(--border-radius) !important;
+  --card-border: .8px solid #e7e0dd !important;
   
 /*  View Picker Settings  */
-  --picker-border-radius:     var(--border-radius);
-  --picker-border-color:      var(--border-color);
-  --picker-bg-color:          var(--primary-color);
-  --picker-text-color:        var(--color-bg-default);
-  --picker-active-bg-color:   var(--secondary-color);
-  --picker-active-text-color: var(--color-text-default);
-  --picker-hover-bg-color:    var(--hover-color);
-  --picker-hover-text-color:  var(--color-text-default);
+  --picker-border-radius: var(--border-radius) !important;
+  --picker-border-color: var(--border-color) !important;
+  --picker-bg-color: var(--primary-color) !important;
+  --picker-text-color:var(--color-bg-default) !important;
+  --picker-active-bg-color: var(--secondary-color) !important;
+  --picker-active-text-color: var(--color-text-default) !important;
+  --picker-hover-bg-color:var(--hover-color) !important;
+  --picker-hover-text-color: var(--color-text-default) !important;
   
 /*  Properties */
-  --collection-title-size:    1.25rem;
-  --collection-text-size:     0.77rem;
-  --pill-padding:             2px 5px;
-  --pill-text-size:           11.1px;
-  --pill-text-weight:         400;
-  --pill-letter-spacing:      1px;
-  --pill-border-radius:       var(--border-radius);
-
-
-/* -----------------------------------------
-*              * components
--------------------------------------------
-    CTA | Buttons  */
-  --cta-padding:              5px 8px!important;
-  --cta-border:               0px solid;
-  --cta-color-text:           var(--white);
-  --cta-border-radius:        var(--border-radius);
-  --cta-color-bg:             var(--hover-color);
-  
-/*  Callouts  */
-  --callout-padding:          ;
-  --callout-border:           0px solid;
-  --callout-border-radius:    var(--border-radius);
-  --callout-shadow:           var(--box-shadow);
-  
-/*  Misc  */
-  --image-border-radius:      5px;
-  --divider-margin:           15px 0px;
-  --divider-opacity:          .5;
-  
-  
-  
-/* ----------------------------------------
-
-*               # TYPOGRAPHY
-
- Typographic styling targets all headings, titles, links and
- text throughout the website - as well as components based on
- such elements, such as buttons and tooltips.
-
------------------------------------------ */
-body {
-	font-weight: 400 !important;
-	text-rendering: optimizeLegibility !important;
+  --collection-title-size:1rem !important;
+  --collection-text-size: 0.88rem !important;
+  --pill-padding:2.5px 5px !important;
+  --pill-text-size: .8rem !important;
+  --pill-text-weight: 400 !important;
+  --pill-letter-spacing: normal !important;
+  --pill-border-radius: var(--border-radius) !important;
 }
 
+/*  -----------------------------------  *
+ *             # COMPONENTS              *
+ *  ------------------------------------ */
+/*              CTA︱button              */
 
-/* -----------------------------------------
-*        * headings & title spacing
------------------------------------------ */
-h1.notion-header__title *,
+:root {
+  --cta-padding: .5em !important;
+  --cta-border: .8px solid !important;
+  --cta-color-text: var(--white) !important;
+  --cta-border-radius:var(--border-radius) !important;
+  --cta-color-bg:var(--secondary-color) !important;
+  
+/*  Callouts  */
+  --callout-padding: 1em !important;
+  --callout-border: .8px solid !important;
+  --callout-border-radius:var(--border-radius) !important;
+  --callout-shadow: var(--box-shadow) !important;
+  
+/*  Misc  */
+  --image-border-radius: 2.5px !important;
+  --divider-margin: .5rem 0 !important;
+  --divider-opacity: 1 !important;
+}
+
+  
+/*  -----------------------------------  *
+ *             # TYPOGRAPHY              *
+ *  ------------------------------------ */
+/*           text︱paragraphs            */
+
+body p {
+	font-weight: 400 !important;
+	line-height: 1.5 !important;
+	text-rendering: optimizeLegibility !important;
+	color: var(--text-default) !important;
+}
+
+ 
+/*           headings︱titles            */
+
+.notion-header__title *,
 h1.notion-heading * {
-	margin: 4.5rem 0 0.75rem !important;
-	font-size: 2.75rem !important;
+	margin-block-start: 2.5rem !important;
+	margin-block-end: .5rem !important;
+	font-size: 2rem !important;
 	font-weight: 600 !important;
 	line-height: 1.125 !important;
 	letter-spacing: -1px !important;
 }
 
 h2.notion-heading * {
-	margin: 3rem 0 0.5rem !important;
-	font-size: 2.5rem !important;
+	margin-block-start: 2rem !important;
+	margin-block-end: .5rem !important;
+	font-size: 1.88rem !important;
 	font-weight: 600 !important;
 	line-height: 1.25 !important;
 	letter-spacing: -.5px !important;
 }
 
 h3.notion-heading * {
-	margin: 3rem 0 0.25rem !important;
+	margin-block-start: 1.5rem !important;
+	margin-block-end: .5rem !important;
 	font-size: 1.75rem !important;
 	font-weight: 600 !important;
 	line-height: 1.5 !important;
@@ -263,24 +229,24 @@ h3.notion-heading * {
 	line-height: 0 !important;
 }
 
+/*             links︱urls             */
 
-/* -----------------------------------------
-*          * general link styles
----------------------------------------- */
 .notion-semantic-string .link,
 .notion-link {
-	text-decoration: none !important;
-	color: var(--primary-color) !important;
+	text-decoration: .8px underline solid #ccc !important;
+	text-underline-offset: 2px !important;
+	color: var(--color-text-gray) !important;
 	opacity: .75 !important;
-	background-color: var(--bg-default) !important;
+	background-color: transparent !important;
 }
 
 .notion-semantic-string .link:hover,
 .notion-link:hover {
 	text-decoration: none !important;
 	font-style: normal !important;
-	font-weight: 600 !important;
-	color: var(--primary-color) !important;
+	font-family: "Inter", sans-serif !important;
+	font-weight: 500 !important;
+	color: var(--background-primary) !important;
 	opacity: 1 !important;
 }
 
@@ -290,9 +256,9 @@ h3.notion-heading * {
 	justify-content: center !important;
 	margin: 0 !important;
 	padding: var(--cta-padding) !important;
-	border-radius: var(--cta--radii) !important;
+	border-radius: var(--border-radius) !important;
 	font-style: normal !important;
-	font-weight: 400 !important;
+	font-weight: 500 !important;
 	color: var(--cta-color-text) !important;
 	opacity: 1 !important;
 	background: var(--cta-color-bg) !important;
@@ -305,9 +271,9 @@ h3.notion-heading * {
 	justify-content: center !important;
 	margin: 0 !important;
 	padding: var(--cta-padding) !important;
-	border-radius: var(--cta--radii) !important;
+	border-radius: var(--border-radius) !important;
 	font-style: normal !important;
-	font-weight: 400 !important;
+	font-weight: 500 !important;
 	color: var(--cta-color-text) !important;
 	opacity: 1 !important;
 	background: var(--cta-color-bg) !important;
@@ -320,9 +286,9 @@ h3.notion-heading * {
 	justify-content: center !important;
 	margin: 0 !important;
 	padding: var(--cta-padding) !important;
-	border-radius: var(--cta--radii) !important;
+	border-radius: var(--border-radius) !important;
 	font-style: normal !important;
-	font-weight: 400 !important;
+	font-weight: 500 !important;
 	color: var(--cta-color-bg) !important;
 	opacity: 1 !important;
 	background: var(--cta-color-text) !important;
@@ -335,40 +301,39 @@ h3.notion-heading * {
 	justify-content: center !important;
 	margin: 0 !important;
 	padding: var(--cta-padding) !important;
-	border-radius: var(--cta--radii) !important;
+	border-radius: var(--border-radius) !important;
 	font-style: normal !important;
-	font-weight: 400 !important;
+	font-weight: 500 !important;
 	color: var(--cta-color-text) !important;
 	opacity: 1 !important;
 	background: var(--cta-color-bg) !important;
 	transition: background 0.2s ease-in-out !important;
 }
 
+strong {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  color: #343434 !important;
+}
 
 
-/* ---------------------------------------
 
-*              # COLLECTIONS
-
- Collections (otherwise known as databases in Notion) typically
- are formatted / displayed differently on site vs in Notion -
- tables, galleries, calendars and lists are styled below for
- optimal view via the (Super.so-based) live website.
-
----------------------------------------- */
-/*  Variables */
+/*  -----------------------------------  *
+ *             # COLLECTIONS             *
+ *  ------------------------------------ */
+/*               variables               */
 :root {
-	--collection-card-cover-height-large: 400px !important;
-	--collection-card-cover-height-medium: 300px !important;
-	--collection-card-cover-height-small: 200px !important;
-	--picker--radius: 5px !important;
+	--collection-card-cover-height-large: auto !important;
+	--collection-card-cover-height-medium: auto !important;
+	--collection-card-cover-height-small: auto !important;
+	--picker--radius: var(--border-radius) !important;
 	--picker--color: transparent !important;
-	--picker-bg-color: rgba(227,222,218,0.999) !important;
-	--picker-text-color: rgb(55,52,51) !important;
-	--picker-active-bg-color: rgb(180,125,117) !important;
-	--picker-active-text-color: rgb(255,255,255) !important;
-	--picker-hover-bg-color: rgb(176,122,122) !important;
-	--picker-hover-text-color: rgb(248,248,248) !important;
+	--picker-bg-color: var(--color-text-orange) !important;
+	--picker-text-color: var(--text-default) !important;
+	--picker-active-bg-color: var(--primary-color) !important;
+	--picker-active-text-color: var(--text-default) !important;
+	--picker-hover-bg-color: var(--secondary-color) !important;
+	--picker-hover-text-color: var(--text-default) !important;
 }
 
 /*  Dropdown Menu */
@@ -378,9 +343,10 @@ h3.notion-heading * {
 }
 
 
-/* -----------------------------------------
-*       * gallery titles & text layout
------------------------------------------ */
+/*  -----------------------------------  *
+ *            general styling            *
+ *  ----------------------------------  */
+
 .notion-collection-card.gallery .notion-property__title .notion-semantic-string {
 	overflow: visible !important;
 	white-space: normal !important;
@@ -401,105 +367,94 @@ h3.notion-heading * {
 }
 
 
-
-/* -------------------------------------
-
-*                 # LAYOUT
-
- Collections (otherwise known as databases in Notion) typically
- are formatted / displayed differently on site vs in Notion -
- tables, galleries, calendars and lists are styled below for
- optimal view via the (Super.so-based) live website.
-
------------------------------------------ */
+/*  -----------------------------------  *
+ *                # LAYOUT               *
+ *  ------------------------------------ */
+/*            padding︱margins           */
 :root {
 	--column-spacing: 25px !important;
-	--top-spacing: 15px !important;
-	--layout-max-width: auto !important;
-	--image--radii: 5px !important;
-	--collection-header-display: flex !important
-	--collection-header-: none !important;
+	--top-spacing: 1rem !important;
+	--layout-max-width: 88vw  !important;
+	--image--radius: 2.5px !important;
+	--collection-header-display: flex !important;
+	--collection-header-icon: none !important;
 }
 
 .notion-title {
-	-bottom: 0 !important;
+	display: none !important;
 }
 
-.notion-header__cover.no cover {
-	height: 70px !important;
-	max-height: 70px !important;
+.notion-header__cover.has-cover {
+  margin-top: 0 !important;
+	height: auto !important;
+	max-height: auto !important;
 }
+.notion-header__cover.no cover {
+	height: 0 !important;
+	max-height: 0 !important;
+}
+
 
 /*  Reduce the Bottom White Space  */
 .super-content {
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
 }
 
 /*  Hidden From View  */
 .notion-property__title__icon-wrapper,
-.notion-header__cover.no-cover,
 .notion-header__title-wrapper,
-.notion-caption .notion-toggle.bg-orange {
+.notion-header__cover.no-cover,
+.notion-toggle.bg-orange,
+.notion-caption, 
+.notion-file {
 	display: none !important;
 }
 
 
+/*  -----------------------------------  *
+ *              # NAVBAR              *
+ *  ------------------------------------ */
+/*              cta button               */
 
-/* ---------------------------------------
-
-*                # NAVBAR
-
- Collections (otherwise known as databases in Notion) typically
- are formatted / displayed differently on site vs in Notion -
- tables, galleries, calendars and lists are styled below for
- optimal view via the (Super.so-based) live website.
-
------------------------------------------ */
-/*  Navbar CTA Button  */
 .super-navbar__cta {
 	padding: var(--cta-padding) !important;
-	border-radius: var(--cta--radii) !important;
+	border-radius: var(--border-radius) !important;
 	font-weight: 400 !important;
 	background-color: var(--primary-color) !important;
 }
 
 /*  CTA Customisation  */
 :root {
-	--cta-color-text: rgb(245,245,245) !important;
+	--cta-color-text: var(--color-bg-default) !important;
 	--cta-color-bg: var(--primary-color) !important;
-	--cta-padding: 10px 25px !important;
-	--cta--radii: 5px !important;
+	--cta-padding: var(--pill-padding) !important;
+	--border-radius: var(--border-radius) !important;
 }
 
 .super-navbar {
 	margin-bottom: 0 !important;
-	background-color: #f5f5f5 !important;
-	backdrop-filter: blur(5px) !important;
+	background-color: #f5f5f555 !important;
+	backdrop-filter: blur(10) !important;
 }
 
 .super-navbar__item,
 .super-navbar__menu-item {
-	-bottom: none !important;
+	margin-bottom: none !important;
 	text-decoration: none !important;
 	font-style: normal !important;
-	color: var(--) !important;
+	color: var(--secondary-color) !important;
 }
 
 
 
-/* --------------------------------------
+/*  -----------------------------------  *
+ *              # COMPONENTS             *
+ *  ------------------------------------ */
+/*                images                 */
 
-*              # COMPONENTS
-
- Collections (otherwise known as databases in Notion) typically
- are formatted / displayed differently on site vs in Notion -
- tables, galleries, calendars and lists are styled below for
- optimal view via the (Super.so-based) live website.
-
--------------------------------------------
-*                 images                 *
----------------------------------------- */
 /*  Make post images full width  */
 .notion-image.page-width {
 	width: 100vw !important;
@@ -513,69 +468,67 @@ h3.notion-heading * {
 }
 
 
-/* --------------------------------------
-*          * button styling
------------------------------------------ */
-/*  Turn bold link blocks into a button  */
+/*                buttons                */
+
+/*  turn bold link blocks into a button  */
 .notion-root .notion-text .notion-text__content .notion-semantic-string span strong .notion-link {
 	display: inline-flex !important;
 	justify-content: center !important;
-	margin: 5px 5px !important;
+	margin: 0 !important;
 	padding: var(--cta-padding) !important;
-	border-radius: var(--cta-radii) !important;
-	border-radius: var(--cta--radii) !important;
+	border-radius: var(--cta-border-radius) !important;
 	font-weight: 400 !important;
-	color: rgb(245,245,245) !important;
-	opacity: 0.75 !important;
+	color: var(--cta-color-text) !important;
+	opacity: 0.888 !important;
 	background: var(--primary-color) !important;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2) !important;
+	box-shadow: var(--box-shadow) !important;
 	transition: all .2s ease !important;
+	text-decoration: none !important;
 }
 
 /*  Button hover  */
 .notion-root .notion-text p.notion-text__content span.notion-semantic-string span strong a.notion-link:hover {
 	opacity: 1 !important;
+	font-weight: 500 !important;
 }
 
 
-/* -----------------------------------------
-*               * callouts
------------------------------------------ */
-.notion-callout. {
-	margin: 5px 5px !important;
-	border-color: transparent !important;
-	border-radius: 5px !important;
-	box-shadow: 5px 5px 5px rgba(245, 245, 245, 0.2) !important;
-}
+/*               callouts                */
 
 .notion-callout {
+	margin: .5rem 0 0 0 !important;
+	padding: 1rem !important;
+	border-color: var(--callout-color) !important;
+	border-radius: var(--border-radius) !important;
+	box-shadow: var(--box-shadow) !important;
+  background-color: rgba(var(--callout-color),.8) !important;
 	flex-direction: column !important;
-	border-radius: 5px !important;
 }
 
 .notion-callout .notion-callout__content {
-	margin-left: 10px !important;
+	padding-left: 1rem !important;
 }
 
+/*               toggles                */
 
-/* ----------------------------------------
-*                * toggles
----------------------------------------- */
 /*  Create borders around Toggles  */
 .notion-toggle {
-	margin: 5px 5px !important;
-	padding: 10px !important;
-	border: 1px solid #e7e0dd !important;
-	border-radius: 5px !important;
+	margin: .25rem !important;
+	padding: .25rem !important;
+	line-height: 1.3 !important;
+	background-color: #EEE9E5 !important;
+	border: 1px solid #dfd2c5 !important;
+	border-radius: var(--border-radius) !important;
 }
 
 .notion-toggle.open {
-	padding-bottom: 10px !important;
+	padding-bottom: 10 !important;
 	background: #EEE9E5 !important;
+	border: 1.25px solid #efbababa !important;
 }
 
-notion-toggle {
-  padding: 0 !important;
+.notion-toggle:hover {
+	border: 1.2px solid #efbaba88 !important;
 }
 
 
@@ -584,12 +537,12 @@ notion-toggle {
 ----------------------------------------- */
 /*  Change default divider  */
 .notion-divider {
-	-bottom: 0.5px solid #efbaba !important;
+	border-bottom: 0.8px solid #efbaba !important;
 }
 
 /*  Remove Gallery Divider  */
 .notion-collection.gallery {
-	-top: 0px solid !important;
+	border-top: 0 solid transparent !important;
 }
 
 
@@ -598,9 +551,9 @@ notion-toggle {
 ----------------------------------------- */
 .notion-quote {
 	position: relative !important;
-	margin: 5px !important;
-	padding-left: 40px !important;
-	: 0 !important;
+	margin: .5rem !important;
+	padding-left: 1em !important;
+	border-left: 0 !important;
 }
 
 .notion-quote::before {
@@ -611,6 +564,6 @@ notion-toggle {
 	height: 25px !important;
 	font-size: 8rem !important;
 	font-weight: 100 !important;
-	color: #e5888abc !important;
+	color: #efbababa !important;
 	opacity: 0.25 !important;
 }
